@@ -1,0 +1,50 @@
+{
+  "evaluation": "organization-hash calibration holdout",
+  "rows": 5657,
+  "basic_linear": {
+    "r2_log10": 0.6990971585923789,
+    "mae_log10": 0.43985252175826556,
+    "error_x": 2.7532935778318794,
+    "median_error_x": 2.182384939559615
+  },
+  "enriched_linear": {
+    "r2_log10": 0.7255456002247737,
+    "mae_log10": 0.42389482199935985,
+    "error_x": 2.6539627440015363,
+    "median_error_x": 2.135602345534346
+  },
+  "catboost_with_residual_calibration": {
+    "r2_log10": 0.83575633349777,
+    "mae_log10": 0.3230759209284045,
+    "error_x": 2.104146242675614,
+    "median_error_x": 1.7691681290749088
+  },
+  "base_model_selection": {
+    "catboost_cat_text": {
+      "r2_log10": 0.7714121881518121,
+      "mae_log10": 0.42309492017730455
+    },
+    "lightgbm_tfidf": {
+      "r2_log10": 0.7672276683735872,
+      "mae_log10": 0.4278211736829367
+    },
+    "dummy_median": {
+      "r2_log10": -0.02101302315966258,
+      "mae_log10": 0.9169403641509839
+    }
+  },
+  "stratified_101": {
+    "ML": {
+      "n": 101,
+      "r2_log10": 0.7723190974901948,
+      "within_2x_pct": 45.54455445544555,
+      "median_factor_error": 2.236724078114695
+    },
+    "Old LLM": {
+      "n": 101,
+      "r2_log10": 0.4148077254871067,
+      "within_2x_pct": 34.65346534653465,
+      "median_factor_error": 2.75
+    }
+  }
+}

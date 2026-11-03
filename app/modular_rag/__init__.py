@@ -1,0 +1,2 @@
+"""Modular LocalRAG application package."""
+

@@ -1,0 +1,627 @@
+{
+  "version": "ml_valuation_calibration_v1",
+  "source": "private enriched venture dataset",
+  "target_col": "Pre-Money Valuation",
+  "currency": "USD",
+  "split": {
+    "type": "organization_hash",
+    "seed": 20260429,
+    "calibration_share": 0.75,
+    "calibration_rows": 17499,
+    "holdout_rows": 5657
+  },
+  "n_rows": 17499,
+  "prediction_bins": [
+    -Infinity,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    Infinity
+  ],
+  "min_segment_n": 25,
+  "max_abs_correction_log10": 0.75,
+  "global": {
+    "n": 17499,
+    "correction_log10": 0.354759244448406,
+    "q10_residual_log10": -0.1576671421735952,
+    "q90_residual_log10": 0.9268447327777585,
+    "mae_log10_after_correction": 0.2598518252428148
+  },
+  "by_stage": {
+    "Angel": {
+      "n": 870,
+      "correction_log10": 0.2802468009771224,
+      "q10_residual_log10": -0.12637158443537758,
+      "q90_residual_log10": 0.8253722029169113,
+      "mae_log10_after_correction": 0.232146557512253
+    },
+    "Convertible Note": {
+      "n": 339,
+      "correction_log10": 0.27654228062970887,
+      "q10_residual_log10": -0.1534332560763472,
+      "q90_residual_log10": 0.8296607659162683,
+      "mae_log10_after_correction": 0.24858612606774866
+    },
+    "Corporate Round": {
+      "n": 264,
+      "correction_log10": 0.589095404415183,
+      "q10_residual_log10": -0.7032817381090406,
+      "q90_residual_log10": 1.784096702876921,
+      "mae_log10_after_correction": 0.6478012076208151
+    },
+    "Debt Financing": {
+      "n": 54,
+      "correction_log10": -0.49342413035061927,
+      "q10_residual_log10": -1.2249888024302016,
+      "q90_residual_log10": 0.40868721493020493,
+      "mae_log10_after_correction": 0.3880766088901697
+    },
+    "Equity Crowdfunding": {
+      "n": 954,
+      "correction_log10": 0.22260232843876482,
+      "q10_residual_log10": -0.18866316594581672,
+      "q90_residual_log10": 0.7117549012108408,
+      "mae_log10_after_correction": 0.2431097901939796
+    },
+    "Funding Round": {
+      "n": 176,
+      "correction_log10": -0.38852427960493374,
+      "q10_residual_log10": -1.1248833938088239,
+      "q90_residual_log10": 1.0120395630513022,
+      "mae_log10_after_correction": 0.47883009194347315
+    },
+    "Grant": {
+      "n": 58,
+      "correction_log10": -0.75,
+      "q10_residual_log10": -1.2948037119224556,
+      "q90_residual_log10": -0.021321042130390266,
+      "mae_log10_after_correction": 0.34884013386444
+    },
+    "Initial Coin Offering": {
+      "n": 51,
+      "correction_log10": -0.2625969700055837,
+      "q10_residual_log10": -0.9758581442817551,
+      "q90_residual_log10": 0.35368099723994817,
+      "mae_log10_after_correction": 0.37034654305411063
+    },
+    "Post-IPO Equity": {
+      "n": 196,
+      "correction_log10": 0.7342111032512166,
+      "q10_residual_log10": -0.7475288383217067,
+      "q90_residual_log10": 2.037540713428613,
+      "mae_log10_after_correction": 0.7693345693090601
+    },
+    "Pre-Seed": {
+      "n": 3456,
+      "correction_log10": 0.39973072920237485,
+      "q10_residual_log10": -0.0001859027422024262,
+      "q90_residual_log10": 0.8478231901315221,
+      "mae_log10_after_correction": 0.21480895414890533
+    },
+    "Private Equity": {
+      "n": 379,
+      "correction_log10": 0.75,
+      "q10_residual_log10": -0.5007429735789035,
+      "q90_residual_log10": 1.7519488135000518,
+      "mae_log10_after_correction": 0.5787382111871011
+    },
+    "Seed": {
+      "n": 5123,
+      "correction_log10": 0.36151708952872674,
+      "q10_residual_log10": -0.07864864813064684,
+      "q90_residual_log10": 0.8554862228932822,
+      "mae_log10_after_correction": 0.23400079666692086
+    },
+    "Series A": {
+      "n": 1600,
+      "correction_log10": 0.29598072184905755,
+      "q10_residual_log10": -0.2709378635094861,
+      "q90_residual_log10": 1.017691764218754,
+      "mae_log10_after_correction": 0.3245290939376657
+    },
+    "Series B": {
+      "n": 1066,
+      "correction_log10": 0.3034306453916349,
+      "q10_residual_log10": -0.25516703147267883,
+      "q90_residual_log10": 0.9452916266939622,
+      "mae_log10_after_correction": 0.3119283933442212
+    },
+    "Series C": {
+      "n": 834,
+      "correction_log10": 0.41179255768377754,
+      "q10_residual_log10": -0.03550282876432895,
+      "q90_residual_log10": 0.911506084235034,
+      "mae_log10_after_correction": 0.2296472259716138
+    },
+    "Series D": {
+      "n": 663,
+      "correction_log10": 0.4053007248055742,
+      "q10_residual_log10": 0.03365960708315257,
+      "q90_residual_log10": 0.829716117983913,
+      "mae_log10_after_correction": 0.20353081640128323
+    },
+    "Series E": {
+      "n": 393,
+      "correction_log10": 0.3708514306190267,
+      "q10_residual_log10": -0.017841572725890476,
+      "q90_residual_log10": 0.779665821842561,
+      "mae_log10_after_correction": 0.1773593624759524
+    },
+    "Series F": {
+      "n": 189,
+      "correction_log10": 0.4236332034538446,
+      "q10_residual_log10": 0.05211908156419192,
+      "q90_residual_log10": 0.8755652894181611,
+      "mae_log10_after_correction": 0.1796176359653483
+    },
+    "Series G": {
+      "n": 82,
+      "correction_log10": 0.553454816236524,
+      "q10_residual_log10": 0.125043494492461,
+      "q90_residual_log10": 0.9709005679261259,
+      "mae_log10_after_correction": 0.27485546329460764
+    },
+    "Series H": {
+      "n": 38,
+      "correction_log10": 0.5526115997029066,
+      "q10_residual_log10": -0.04004313872859803,
+      "q90_residual_log10": 1.1065991133915514,
+      "mae_log10_after_correction": 0.31401477628203
+    },
+    "Venture - Series Unknown": {
+      "n": 659,
+      "correction_log10": 0.27831887737783134,
+      "q10_residual_log10": -0.5019119490971672,
+      "q90_residual_log10": 1.052804048889985,
+      "mae_log10_after_correction": 0.4041003193055621
+    }
+  },
+  "by_stage_prediction_bucket": {
+    "Angel||-inf_6.5": {
+      "n": 709,
+      "correction_log10": 0.2786880772011511,
+      "q10_residual_log10": -0.10351658255360388,
+      "q90_residual_log10": 0.7856441422280549,
+      "mae_log10_after_correction": 0.2240459862033326
+    },
+    "Angel||6.5_7.0": {
+      "n": 124,
+      "correction_log10": 0.261128059509963,
+      "q10_residual_log10": -0.1799735034243552,
+      "q90_residual_log10": 0.9173227559714895,
+      "mae_log10_after_correction": 0.27890317424706
+    },
+    "Convertible Note||-inf_6.5": {
+      "n": 163,
+      "correction_log10": 0.2871836680918367,
+      "q10_residual_log10": -0.057750215737306654,
+      "q90_residual_log10": 0.7140077924028342,
+      "mae_log10_after_correction": 0.22273565304331644
+    },
+    "Convertible Note||6.5_7.0": {
+      "n": 157,
+      "correction_log10": 0.2555640610966856,
+      "q10_residual_log10": -0.24010231347960623,
+      "q90_residual_log10": 0.8474860676621304,
+      "mae_log10_after_correction": 0.2649497700857957
+    },
+    "Corporate Round||7.0_7.5": {
+      "n": 61,
+      "correction_log10": 0.26443805173448887,
+      "q10_residual_log10": -0.7177625647457688,
+      "q90_residual_log10": 1.6670065263369596,
+      "mae_log10_after_correction": 0.6047176532366958
+    },
+    "Corporate Round||7.5_8.0": {
+      "n": 105,
+      "correction_log10": 0.4197960161607668,
+      "q10_residual_log10": -1.003470821917319,
+      "q90_residual_log10": 1.6482923690574156,
+      "mae_log10_after_correction": 0.6468151009208816
+    },
+    "Corporate Round||8.0_8.5": {
+      "n": 73,
+      "correction_log10": 0.75,
+      "q10_residual_log10": -0.20363987381510337,
+      "q90_residual_log10": 1.8281547907235878,
+      "mae_log10_after_correction": 0.4923719401376996
+    },
+    "Debt Financing||7.0_7.5": {
+      "n": 29,
+      "correction_log10": -0.2749283833564071,
+      "q10_residual_log10": -1.2679731133579661,
+      "q90_residual_log10": 0.46085858876685387,
+      "mae_log10_after_correction": 0.6990168977659836
+    },
+    "Equity Crowdfunding||-inf_6.5": {
+      "n": 49,
+      "correction_log10": 0.10395675295081297,
+      "q10_residual_log10": -0.24223478504994986,
+      "q90_residual_log10": 0.7861015438890518,
+      "mae_log10_after_correction": 0.17612647632858724
+    },
+    "Equity Crowdfunding||6.5_7.0": {
+      "n": 494,
+      "correction_log10": 0.19891586174438114,
+      "q10_residual_log10": -0.17507121087791103,
+      "q90_residual_log10": 0.6697184250000842,
+      "mae_log10_after_correction": 0.22320229041944506
+    },
+    "Equity Crowdfunding||7.0_7.5": {
+      "n": 381,
+      "correction_log10": 0.26939595978030173,
+      "q10_residual_log10": -0.1914134338247191,
+      "q90_residual_log10": 0.688766392037178,
+      "mae_log10_after_correction": 0.24607549194270995
+    },
+    "Equity Crowdfunding||7.5_8.0": {
+      "n": 30,
+      "correction_log10": 0.536958854628272,
+      "q10_residual_log10": 0.131235798564537,
+      "q90_residual_log10": 0.8888956712198604,
+      "mae_log10_after_correction": 0.26507017880305694
+    },
+    "Funding Round||7.0_7.5": {
+      "n": 66,
+      "correction_log10": -0.529215722880565,
+      "q10_residual_log10": -1.0929951572205887,
+      "q90_residual_log10": 0.8168607176234004,
+      "mae_log10_after_correction": 0.46697749841462866
+    },
+    "Funding Round||7.5_8.0": {
+      "n": 71,
+      "correction_log10": -0.2686235522614808,
+      "q10_residual_log10": -1.1563521024185643,
+      "q90_residual_log10": 0.8214054849681007,
+      "mae_log10_after_correction": 0.4899823874345248
+    },
+    "Grant||7.0_7.5": {
+      "n": 26,
+      "correction_log10": -0.75,
+      "q10_residual_log10": -1.2582567055001048,
+      "q90_residual_log10": -0.47613468492198807,
+      "mae_log10_after_correction": 0.3202534467010567
+    },
+    "Post-IPO Equity||7.5_8.0": {
+      "n": 58,
+      "correction_log10": 0.75,
+      "q10_residual_log10": -0.44280675776935297,
+      "q90_residual_log10": 2.264353006312107,
+      "mae_log10_after_correction": 0.8779480538937228
+    },
+    "Post-IPO Equity||8.0_8.5": {
+      "n": 87,
+      "correction_log10": 0.7135107560950242,
+      "q10_residual_log10": -0.8315267456354594,
+      "q90_residual_log10": 1.8648761904252535,
+      "mae_log10_after_correction": 0.7674282056833235
+    },
+    "Post-IPO Equity||8.5_9.0": {
+      "n": 31,
+      "correction_log10": 0.42967085908361113,
+      "q10_residual_log10": -0.8781175220602462,
+      "q90_residual_log10": 1.5847259570550438,
+      "mae_log10_after_correction": 0.8280200400892994
+    },
+    "Pre-Seed||-inf_6.5": {
+      "n": 3069,
+      "correction_log10": 0.4026304460640695,
+      "q10_residual_log10": 0.0055688633799471565,
+      "q90_residual_log10": 0.8456238368431489,
+      "mae_log10_after_correction": 0.21528522460578703
+    },
+    "Pre-Seed||6.5_7.0": {
+      "n": 376,
+      "correction_log10": 0.37708453762543437,
+      "q10_residual_log10": -0.06122062918629734,
+      "q90_residual_log10": 0.8250197232600383,
+      "mae_log10_after_correction": 0.21284170032644578
+    },
+    "Private Equity||7.0_7.5": {
+      "n": 67,
+      "correction_log10": 0.4278193375747561,
+      "q10_residual_log10": -0.6576646183743289,
+      "q90_residual_log10": 1.815239680657901,
+      "mae_log10_after_correction": 0.8635514368864383
+    },
+    "Private Equity||7.5_8.0": {
+      "n": 117,
+      "correction_log10": 0.75,
+      "q10_residual_log10": -0.8459009535800783,
+      "q90_residual_log10": 1.8242541836121735,
+      "mae_log10_after_correction": 0.7149948520686831
+    },
+    "Private Equity||8.0_8.5": {
+      "n": 115,
+      "correction_log10": 0.75,
+      "q10_residual_log10": 0.27667169634436706,
+      "q90_residual_log10": 1.7401991925085583,
+      "mae_log10_after_correction": 0.4163888398152036
+    },
+    "Private Equity||8.5_9.0": {
+      "n": 57,
+      "correction_log10": 0.7193835403582742,
+      "q10_residual_log10": 0.07441839257020572,
+      "q90_residual_log10": 1.562340475966955,
+      "mae_log10_after_correction": 0.37367857614733424
+    },
+    "Seed||-inf_6.5": {
+      "n": 2958,
+      "correction_log10": 0.37423249623318533,
+      "q10_residual_log10": -0.06422032928485662,
+      "q90_residual_log10": 0.8504310732479368,
+      "mae_log10_after_correction": 0.229905398439326
+    },
+    "Seed||6.5_7.0": {
+      "n": 1790,
+      "correction_log10": 0.34441126928186305,
+      "q10_residual_log10": -0.09703306627817526,
+      "q90_residual_log10": 0.842952236364499,
+      "mae_log10_after_correction": 0.22079055189219599
+    },
+    "Seed||7.0_7.5": {
+      "n": 294,
+      "correction_log10": 0.3020002788045666,
+      "q10_residual_log10": -0.14291068161285408,
+      "q90_residual_log10": 0.8616122169358368,
+      "mae_log10_after_correction": 0.29169660781073325
+    },
+    "Seed||7.5_8.0": {
+      "n": 50,
+      "correction_log10": 0.3146268525091389,
+      "q10_residual_log10": -0.5479770690745802,
+      "q90_residual_log10": 1.0286278239442188,
+      "mae_log10_after_correction": 0.3518888158790352
+    },
+    "Seed||8.0_8.5": {
+      "n": 27,
+      "correction_log10": 0.75,
+      "q10_residual_log10": -0.30436700376751663,
+      "q90_residual_log10": 1.390054101784549,
+      "mae_log10_after_correction": 0.3938967230098207
+    },
+    "Series A||-inf_6.5": {
+      "n": 114,
+      "correction_log10": 0.4647531832029763,
+      "q10_residual_log10": -0.17198472578310559,
+      "q90_residual_log10": 1.2077345960425114,
+      "mae_log10_after_correction": 0.3602218379906694
+    },
+    "Series A||6.5_7.0": {
+      "n": 505,
+      "correction_log10": 0.3180057929792186,
+      "q10_residual_log10": -0.23599516080517743,
+      "q90_residual_log10": 0.9856904129337009,
+      "mae_log10_after_correction": 0.29051576469820173
+    },
+    "Series A||7.0_7.5": {
+      "n": 436,
+      "correction_log10": 0.2734605083089656,
+      "q10_residual_log10": -0.2594575201581808,
+      "q90_residual_log10": 0.9350984727882437,
+      "mae_log10_after_correction": 0.3115187083076316
+    },
+    "Series A||7.5_8.0": {
+      "n": 288,
+      "correction_log10": 0.22855204277860697,
+      "q10_residual_log10": -0.2756589757619749,
+      "q90_residual_log10": 1.108740590416832,
+      "mae_log10_after_correction": 0.30648592150119436
+    },
+    "Series A||8.0_8.5": {
+      "n": 160,
+      "correction_log10": 0.2176831392630607,
+      "q10_residual_log10": -0.3194350970126905,
+      "q90_residual_log10": 0.97452248684517,
+      "mae_log10_after_correction": 0.38915650253593803
+    },
+    "Series A||8.5_9.0": {
+      "n": 69,
+      "correction_log10": 0.24452300452205478,
+      "q10_residual_log10": -0.23814538631969384,
+      "q90_residual_log10": 1.0949784328957377,
+      "mae_log10_after_correction": 0.3437099877663421
+    },
+    "Series B||6.5_7.0": {
+      "n": 29,
+      "correction_log10": 0.10433893373349967,
+      "q10_residual_log10": -0.38752128043522943,
+      "q90_residual_log10": 0.7089754160883281,
+      "mae_log10_after_correction": 0.31527619498381476
+    },
+    "Series B||7.0_7.5": {
+      "n": 152,
+      "correction_log10": 0.21386549998993498,
+      "q10_residual_log10": -0.46815516554670666,
+      "q90_residual_log10": 0.9276331519694986,
+      "mae_log10_after_correction": 0.2718462565940425
+    },
+    "Series B||7.5_8.0": {
+      "n": 306,
+      "correction_log10": 0.3507874295345399,
+      "q10_residual_log10": -0.30241054280618807,
+      "q90_residual_log10": 1.0467332319163924,
+      "mae_log10_after_correction": 0.33058709637373607
+    },
+    "Series B||8.0_8.5": {
+      "n": 338,
+      "correction_log10": 0.31884106114514044,
+      "q10_residual_log10": -0.19651613572540821,
+      "q90_residual_log10": 0.8343072486793995,
+      "mae_log10_after_correction": 0.3072659933448101
+    },
+    "Series B||8.5_9.0": {
+      "n": 181,
+      "correction_log10": 0.25401720954191553,
+      "q10_residual_log10": -0.18471946980679732,
+      "q90_residual_log10": 0.966483440020367,
+      "mae_log10_after_correction": 0.28585953145230825
+    },
+    "Series B||9.0_9.5": {
+      "n": 47,
+      "correction_log10": 0.3838661832198369,
+      "q10_residual_log10": -0.21812355377987946,
+      "q90_residual_log10": 1.0014076388544377,
+      "mae_log10_after_correction": 0.292908264323243
+    },
+    "Series C||7.0_7.5": {
+      "n": 26,
+      "correction_log10": 0.08279678157052262,
+      "q10_residual_log10": -0.352606968134924,
+      "q90_residual_log10": 0.5123912020826413,
+      "mae_log10_after_correction": 0.18629456538962552
+    },
+    "Series C||7.5_8.0": {
+      "n": 118,
+      "correction_log10": 0.3122817100728823,
+      "q10_residual_log10": -0.25792652192750615,
+      "q90_residual_log10": 0.9715961806182105,
+      "mae_log10_after_correction": 0.2697939120775197
+    },
+    "Series C||8.0_8.5": {
+      "n": 351,
+      "correction_log10": 0.45417916044695517,
+      "q10_residual_log10": 0.006429819277174786,
+      "q90_residual_log10": 0.8560166009244394,
+      "mae_log10_after_correction": 0.21090118736763586
+    },
+    "Series C||8.5_9.0": {
+      "n": 297,
+      "correction_log10": 0.39528738325991597,
+      "q10_residual_log10": 0.02999374283166745,
+      "q90_residual_log10": 0.9640000805325663,
+      "mae_log10_after_correction": 0.21957293845940917
+    },
+    "Series C||9.0_9.5": {
+      "n": 35,
+      "correction_log10": 0.4888345127133924,
+      "q10_residual_log10": -0.05709220251661505,
+      "q90_residual_log10": 0.967012710131527,
+      "mae_log10_after_correction": 0.31596319333802825
+    },
+    "Series D||7.5_8.0": {
+      "n": 42,
+      "correction_log10": 0.12203086917137895,
+      "q10_residual_log10": -0.2734854020085847,
+      "q90_residual_log10": 0.8219215418816548,
+      "mae_log10_after_correction": 0.22690067558190652
+    },
+    "Series D||8.0_8.5": {
+      "n": 191,
+      "correction_log10": 0.41970818141991195,
+      "q10_residual_log10": 0.060226233955487984,
+      "q90_residual_log10": 0.8072075904725136,
+      "mae_log10_after_correction": 0.17075739589657957
+    },
+    "Series D||8.5_9.0": {
+      "n": 345,
+      "correction_log10": 0.393357294034546,
+      "q10_residual_log10": 0.05067784912403359,
+      "q90_residual_log10": 0.8065887538818011,
+      "mae_log10_after_correction": 0.20098420505532388
+    },
+    "Series D||9.0_9.5": {
+      "n": 76,
+      "correction_log10": 0.5262658692304036,
+      "q10_residual_log10": 0.17043290254530863,
+      "q90_residual_log10": 0.8877150458242768,
+      "mae_log10_after_correction": 0.19509670049460226
+    },
+    "Series E||8.0_8.5": {
+      "n": 70,
+      "correction_log10": 0.4692624406954051,
+      "q10_residual_log10": -0.10653461129715774,
+      "q90_residual_log10": 0.8103857689280684,
+      "mae_log10_after_correction": 0.22174538413694833
+    },
+    "Series E||8.5_9.0": {
+      "n": 225,
+      "correction_log10": 0.3587221729964991,
+      "q10_residual_log10": 0.05357651382292908,
+      "q90_residual_log10": 0.774186124987662,
+      "mae_log10_after_correction": 0.16818508543246757
+    },
+    "Series E||9.0_9.5": {
+      "n": 83,
+      "correction_log10": 0.3875991028297143,
+      "q10_residual_log10": 0.011822818369563507,
+      "q90_residual_log10": 0.8084365971327933,
+      "mae_log10_after_correction": 0.1723844476800238
+    },
+    "Series F||8.5_9.0": {
+      "n": 110,
+      "correction_log10": 0.42174549007276774,
+      "q10_residual_log10": 0.1019271382827661,
+      "q90_residual_log10": 0.8671110490023411,
+      "mae_log10_after_correction": 0.18732681420313213
+    },
+    "Series F||9.0_9.5": {
+      "n": 58,
+      "correction_log10": 0.42904846423914744,
+      "q10_residual_log10": 0.05899690183055668,
+      "q90_residual_log10": 0.8934123011418615,
+      "mae_log10_after_correction": 0.15512229608265038
+    },
+    "Series G||8.5_9.0": {
+      "n": 41,
+      "correction_log10": 0.5600036922759148,
+      "q10_residual_log10": 0.08635196588218896,
+      "q90_residual_log10": 0.9687504947182504,
+      "mae_log10_after_correction": 0.29944854426534384
+    },
+    "Series G||9.0_9.5": {
+      "n": 35,
+      "correction_log10": 0.6242142633885628,
+      "q10_residual_log10": 0.2016674939834484,
+      "q90_residual_log10": 1.0336303551110213,
+      "mae_log10_after_correction": 0.20245229464002534
+    },
+    "Venture - Series Unknown||6.5_7.0": {
+      "n": 86,
+      "correction_log10": 0.11732036873400409,
+      "q10_residual_log10": -0.4264429579617661,
+      "q90_residual_log10": 0.8929011751117115,
+      "mae_log10_after_correction": 0.33323478564234676
+    },
+    "Venture - Series Unknown||7.0_7.5": {
+      "n": 172,
+      "correction_log10": 0.2031409333121723,
+      "q10_residual_log10": -0.6150681497890906,
+      "q90_residual_log10": 0.9433905885441242,
+      "mae_log10_after_correction": 0.4383002345364284
+    },
+    "Venture - Series Unknown||7.5_8.0": {
+      "n": 123,
+      "correction_log10": 0.154708644920464,
+      "q10_residual_log10": -0.6178064654265352,
+      "q90_residual_log10": 1.1414163021949413,
+      "mae_log10_after_correction": 0.39285276229842214
+    },
+    "Venture - Series Unknown||8.0_8.5": {
+      "n": 122,
+      "correction_log10": 0.46244829710174606,
+      "q10_residual_log10": -0.4672450803322716,
+      "q90_residual_log10": 1.0720891171069309,
+      "mae_log10_after_correction": 0.3844559709844164
+    },
+    "Venture - Series Unknown||8.5_9.0": {
+      "n": 87,
+      "correction_log10": 0.5370702244117211,
+      "q10_residual_log10": -0.09035333580737055,
+      "q90_residual_log10": 1.1525014426479396,
+      "mae_log10_after_correction": 0.4215604160287416
+    },
+    "Venture - Series Unknown||9.0_9.5": {
+      "n": 47,
+      "correction_log10": 0.5561336292748447,
+      "q10_residual_log10": -0.1667401011879093,
+      "q90_residual_log10": 1.0448741120384664,
+      "mae_log10_after_correction": 0.3310328147377266
+    }
+  }
+}

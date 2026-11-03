@@ -1,0 +1,34 @@
+{
+  "source": "Carta State of Private Markets 2025 (manual baseline)",
+  "updated": "2026-02",
+  "us_medians": {
+    "Pre-Seed": {
+      "pre_money_valuation_usd": 3000000,
+      "round_size_usd": 750000
+    },
+    "Seed": {
+      "pre_money_valuation_usd": 16000000,
+      "round_size_usd": 2500000
+    },
+    "Series A": {
+      "pre_money_valuation_usd": 49300000,
+      "round_size_usd": 12000000
+    },
+    "Series B": {
+      "pre_money_valuation_usd": 110000000,
+      "round_size_usd": 30000000
+    },
+    "Series C": {
+      "pre_money_valuation_usd": 300000000,
+      "round_size_usd": 70000000
+    }
+  },
+  "regional_discount": {
+    "russia": 0.30,
+    "europe": 0.60,
+    "india": 0.40,
+    "latam": 0.35,
+    "us": 1.0
+  },
+  "ai_premium_multiplier": 1.38
+}
